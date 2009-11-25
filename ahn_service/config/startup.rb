@@ -5,7 +5,7 @@ unless defined? Adhearsion
     require File.dirname(__FILE__) + "/../adhearsion/lib/adhearsion.rb"
   else  
     require 'rubygems'
-    gem 'adhearsion', '>= 0.8.2'
+    gem 'adhearsion', '>= 0.8.3'
     require 'adhearsion'
   end
 end
@@ -26,7 +26,7 @@ Adhearsion::Configuration.configure do |config|
   
   # By default Asterisk is enabled with the default settings
   config.enable_asterisk
-  # config.asterisk.enable_ami :host => "127.0.0.1", :username => "admin", :password => "password", :events => true
+  config.asterisk.enable_ami :host => "127.0.0.1", :username => "admin", :password => "password", :events => true
   
   # config.enable_drb
   
@@ -34,7 +34,7 @@ Adhearsion::Configuration.configure do |config|
   # the Rails app folder with which you're integrating. The second argument must be one of the 
   # the following: :development, :production, or :test.
   
-  # config.enable_rails :path => 'gui', :env => :development
+  config.enable_rails :path => '..', :env => :development
   
   # Note: You CANNOT do enable_rails and enable_database at the same time. When you enable Rails,
   # it will automatically connect to same database Rails does and load the Rails app's models.
