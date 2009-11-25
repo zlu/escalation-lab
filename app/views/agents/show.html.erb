@@ -1,0 +1,18 @@
+<p>
+  <b>Login:</b>
+  <%=h @agent.login %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @agent.name %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%=h @agent.state %>
+</p>
+
+
+<%= link_to 'Edit', edit_agent_path(@agent) %> |
+<%= link_to 'Back', agents_path %>

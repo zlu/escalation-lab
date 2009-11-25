@@ -1,0 +1,23 @@
+<p>
+  <b>Channel:</b>
+  <%=h @call.channel %>
+</p>
+
+<p>
+  <b>Conf guid:</b>
+  <%=h @call.conf_guid %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%=h @call.state %>
+</p>
+
+<p>
+  <b>Customer:</b>
+  <%=h @call.customer_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_call_path(@call) %> |
+<%= link_to 'Back', calls_path %>

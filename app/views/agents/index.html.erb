@@ -1,0 +1,24 @@
+<h1>Listing agents</h1>
+
+<table>
+  <tr>
+    <th>Login</th>
+    <th>Name</th>
+    <th>State</th>
+  </tr>
+
+<% @agents.each do |agent| %>
+  <tr>
+    <td><%=h agent.login %></td>
+    <td><%=h agent.name %></td>
+    <td><%=h agent.state %></td>
+    <td><%= link_to 'Show', agent %></td>
+    <td><%= link_to 'Edit', edit_agent_path(agent) %></td>
+    <td><%= link_to 'Destroy', agent, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New agent', new_agent_path %>

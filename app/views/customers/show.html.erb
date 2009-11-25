@@ -1,0 +1,18 @@
+<p>
+  <b>Name:</b>
+  <%=h @customer.name %>
+</p>
+
+<p>
+  <b>Phone number:</b>
+  <%=h @customer.phone_number %>
+</p>
+
+<p>
+  <b>Twitter screen name:</b>
+  <%=h @customer.twitter_screen_name %>
+</p>
+
+
+<%= link_to 'Edit', edit_customer_path(@customer) %> |
+<%= link_to 'Back', customers_path %>

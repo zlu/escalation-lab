@@ -1,0 +1,27 @@
+<h1>New call</h1>
+
+<% form_for(@call) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :channel %><br />
+    <%= f.text_field :channel %>
+  </p>
+  <p>
+    <%= f.label :conf_guid %><br />
+    <%= f.text_field :conf_guid %>
+  </p>
+  <p>
+    <%= f.label :state %><br />
+    <%= f.text_field :state %>
+  </p>
+  <p>
+    <%= f.label :customer_id %><br />
+    <%= f.text_field :customer_id %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', calls_path %>

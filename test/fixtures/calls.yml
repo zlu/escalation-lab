@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  channel: MyString
+  conf_guid: MyString
+  state: MyString
+  customer_id: 1
+
+two:
+  channel: MyString
+  conf_guid: MyString
+  state: MyString
+  customer_id: 1
