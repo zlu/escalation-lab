@@ -26,8 +26,4 @@ class Call < ActiveRecord::Base
                 :from  => [:arrived, :queued, :answered]
   end
   
-  # Get all of the calls in queue properly sorted
-  def get_queue
-    
-  end
 end
