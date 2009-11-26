@@ -11,9 +11,9 @@
 ##
 # Asterisk Manager Interface example:
 #
-# events.asterisk.manager_interface.each do |event|
-#   ahn_log.events event.inspect
-# end
+events.asterisk.manager_interface.each do |event|
+  process_event(event)
+end
 #
 # This assumes you gave :events => true to the config.asterisk.enable_ami method in config/startup.rb
 #

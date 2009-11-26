@@ -1,1 +1,18 @@
-# You can use this file for component-specific configuration.
+main_number: 18005551212
+
+# Messages to play to caller
+messages:
+    welcome: tt-monkeys
+
+# Intervals to loop and check various things
+intervals:
+    check_agents: 1
+    check_queue: 1
+
+# What we use to dial
+dialing:
+    prefix: SIP/1
+    postfix: @corpsip-voxeo
+    context: escalation_lab
+    priority: 1
+    async: true
