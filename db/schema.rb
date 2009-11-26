@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091104234504) do
+ActiveRecord::Schema.define(:version => 20091125230457) do
 
   create_table "agents", :force => true do |t|
     t.string   "login"
@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(:version => 20091104234504) do
     t.string   "state"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "extension"
   end
 
   create_table "calls", :force => true do |t|
