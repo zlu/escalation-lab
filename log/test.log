@@ -1349,3 +1349,161 @@ Migrating to AddExtensionToAgent (20091125230457)
   [4;35;1mCall Update (0.1ms)[0m   [0mUPDATE "calls" SET "updated_at" = '2009-11-26 01:22:58', "state" = 'queued' WHERE "id" = 14[0m
   [4;36;1mCustomer Update (0.1ms)[0m   [0;1mUPDATE "customers" SET "updated_at" = '2009-11-26 01:22:58', "priority" = 110 WHERE "id" = 60[0m
   [4;35;1mCall Load (0.3ms)[0m   [0mSELECT calls.id, calls.channel, calls.conf_guid, calls.created_at, customers.priority FROM "calls" INNER JOIN "customers" ON "customers".id = "calls".customer_id WHERE (state = 'queued') ORDER BY calls.created_at ASC[0m
+  [4;36;1mCustomer Create (0.4ms)[0m   [0;1mINSERT INTO "customers" ("name", "twitter_screen_name", "created_at", "updated_at", "priority", "phone_number") VALUES(NULL, NULL, '2009-11-26 01:25:18', '2009-11-26 01:25:18', 100, '4155551212')[0m
+  [4;35;1mCall Create (0.2ms)[0m   [0mINSERT INTO "calls" ("created_at", "updated_at", "conf_guid", "channel", "customer_id", "state") VALUES('2009-11-26 01:25:18', '2009-11-26 01:25:18', NULL, '1234', 60, 'arrived')[0m
+  [4;36;1mCall Create (0.3ms)[0m   [0;1mINSERT INTO "calls" ("created_at", "updated_at", "conf_guid", "channel", "customer_id", "state") VALUES('2009-11-26 01:25:18', '2009-11-26 01:25:18', NULL, '1234', 60, 'arrived')[0m
+  [4;35;1mCall Update (0.1ms)[0m   [0mUPDATE "calls" SET "updated_at" = '2009-11-26 01:25:18', "state" = 'queued' WHERE "id" = 13[0m
+  [4;36;1mCall Create (0.3ms)[0m   [0;1mINSERT INTO "calls" ("created_at", "updated_at", "conf_guid", "channel", "customer_id", "state") VALUES('2009-11-26 01:25:18', '2009-11-26 01:25:18', NULL, '1234', 60, 'arrived')[0m
+  [4;35;1mCall Update (0.1ms)[0m   [0mUPDATE "calls" SET "updated_at" = '2009-11-26 01:25:18', "state" = 'queued' WHERE "id" = 13[0m
+  [4;36;1mCall Update (0.1ms)[0m   [0;1mUPDATE "calls" SET "updated_at" = '2009-11-26 01:25:18', "state" = 'answered' WHERE "id" = 13[0m
+  [4;35;1mCall Create (0.3ms)[0m   [0mINSERT INTO "calls" ("created_at", "updated_at", "conf_guid", "channel", "customer_id", "state") VALUES('2009-11-26 01:25:18', '2009-11-26 01:25:18', NULL, '1234', 60, 'arrived')[0m
+  [4;36;1mCall Update (0.1ms)[0m   [0;1mUPDATE "calls" SET "updated_at" = '2009-11-26 01:25:18', "state" = 'queued' WHERE "id" = 13[0m
+  [4;35;1mCall Update (0.1ms)[0m   [0mUPDATE "calls" SET "updated_at" = '2009-11-26 01:25:18', "state" = 'answered' WHERE "id" = 13[0m
+  [4;36;1mCall Update (0.1ms)[0m   [0;1mUPDATE "calls" SET "updated_at" = '2009-11-26 01:25:18', "state" = 'hungup' WHERE "id" = 13[0m
+  [4;35;1mCall Create (0.3ms)[0m   [0mINSERT INTO "calls" ("created_at", "updated_at", "conf_guid", "channel", "customer_id", "state") VALUES('2009-11-26 01:25:18', '2009-11-26 01:25:18', NULL, '1234', 60, 'arrived')[0m
+  [4;36;1mCall Load (0.3ms)[0m   [0;1mSELECT * FROM "calls" WHERE ("calls"."channel" = '1234') LIMIT 1[0m
+  [4;35;1mCall Create (0.3ms)[0m   [0mINSERT INTO "calls" ("created_at", "updated_at", "conf_guid", "channel", "customer_id", "state") VALUES('2009-11-26 01:25:18', '2009-11-26 01:25:18', NULL, '1234', 60, 'arrived')[0m
+  [4;36;1mCall Create (0.1ms)[0m   [0;1mINSERT INTO "calls" ("created_at", "updated_at", "conf_guid", "channel", "customer_id", "state") VALUES('2009-11-26 01:25:18', '2009-11-26 01:25:18', NULL, '1234', 60, 'arrived')[0m
+  [4;35;1mCall Update (0.1ms)[0m   [0mUPDATE "calls" SET "updated_at" = '2009-11-26 01:25:18', "state" = 'queued' WHERE "id" = 14[0m
+  [4;36;1mCall Load (0.2ms)[0m   [0;1mSELECT calls.id, calls.channel, calls.conf_guid, calls.created_at, customers.priority FROM "calls" INNER JOIN "customers" ON "customers".id = "calls".customer_id WHERE (state = 'queued') [0m
+  [4;35;1mCall Create (0.3ms)[0m   [0mINSERT INTO "calls" ("created_at", "updated_at", "conf_guid", "channel", "customer_id", "state") VALUES('2009-11-26 01:25:18', '2009-11-26 01:25:18', NULL, '1234', 60, 'arrived')[0m
+  [4;36;1mCall Update (0.1ms)[0m   [0;1mUPDATE "calls" SET "updated_at" = '2009-11-26 01:25:18', "state" = 'queued' WHERE "id" = 13[0m
+  [4;35;1mCustomer Create (0.1ms)[0m   [0mINSERT INTO "customers" ("name", "twitter_screen_name", "created_at", "updated_at", "priority", "phone_number") VALUES(NULL, NULL, '2009-11-26 01:25:18', '2009-11-26 01:25:18', 100, '3035551212')[0m
+  [4;36;1mCall Create (0.1ms)[0m   [0;1mINSERT INTO "calls" ("created_at", "updated_at", "conf_guid", "channel", "customer_id", "state") VALUES('2009-11-26 01:25:18', '2009-11-26 01:25:18', NULL, '1987', 61, 'arrived')[0m
+  [4;35;1mCall Update (0.1ms)[0m   [0mUPDATE "calls" SET "updated_at" = '2009-11-26 01:25:18', "state" = 'queued' WHERE "id" = 14[0m
+  [4;36;1mCustomer Update (0.1ms)[0m   [0;1mUPDATE "customers" SET "updated_at" = '2009-11-26 01:25:18', "priority" = 110 WHERE "id" = 61[0m
+  [4;35;1mCall Load (0.3ms)[0m   [0mSELECT calls.id, calls.channel, calls.conf_guid, calls.created_at, customers.priority FROM "calls" INNER JOIN "customers" ON "customers".id = "calls".customer_id WHERE (state = 'queued') ORDER BY calls.created_at ASC[0m
+  [4;36;1mCall Create (0.3ms)[0m   [0;1mINSERT INTO "calls" ("created_at", "updated_at", "conf_guid", "channel", "customer_id", "state") VALUES('2009-11-26 01:25:18', '2009-11-26 01:25:18', NULL, '1234', 60, 'arrived')[0m
+  [4;35;1mCall Update (0.1ms)[0m   [0mUPDATE "calls" SET "updated_at" = '2009-11-26 01:25:18', "state" = 'queued' WHERE "id" = 13[0m
+  [4;36;1mCustomer Create (0.1ms)[0m   [0;1mINSERT INTO "customers" ("name", "twitter_screen_name", "created_at", "updated_at", "priority", "phone_number") VALUES(NULL, NULL, '2009-11-26 01:25:18', '2009-11-26 01:25:18', 100, '3035551212')[0m
+  [4;35;1mCall Create (0.1ms)[0m   [0mINSERT INTO "calls" ("created_at", "updated_at", "conf_guid", "channel", "customer_id", "state") VALUES('2009-11-26 01:25:18', '2009-11-26 01:25:18', NULL, '1987', 61, 'arrived')[0m
+  [4;36;1mCall Update (0.1ms)[0m   [0;1mUPDATE "calls" SET "updated_at" = '2009-11-26 01:25:18', "state" = 'queued' WHERE "id" = 14[0m
+  [4;35;1mCustomer Update (0.1ms)[0m   [0mUPDATE "customers" SET "updated_at" = '2009-11-26 01:25:18', "priority" = 110 WHERE "id" = 61[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mCustomer Create (0.7ms)[0m   [0;1mINSERT INTO "customers" ("name", "twitter_screen_name", "created_at", "updated_at", "priority", "phone_number") VALUES(NULL, NULL, '2009-11-26 01:25:32', '2009-11-26 01:25:32', 100, '4155551212')[0m
+  [4;35;1mCall Create (0.2ms)[0m   [0mINSERT INTO "calls" ("created_at", "updated_at", "conf_guid", "channel", "customer_id", "state") VALUES('2009-11-26 01:25:32', '2009-11-26 01:25:32', NULL, '1234', 61, 'arrived')[0m
+  [4;36;1mCall Create (0.2ms)[0m   [0;1mINSERT INTO "calls" ("created_at", "updated_at", "conf_guid", "channel", "customer_id", "state") VALUES('2009-11-26 01:25:32', '2009-11-26 01:25:32', NULL, '1234', 61, 'arrived')[0m
+  [4;35;1mCall Update (0.1ms)[0m   [0mUPDATE "calls" SET "updated_at" = '2009-11-26 01:25:32', "state" = 'queued' WHERE "id" = 13[0m
+  [4;36;1mCall Create (0.2ms)[0m   [0;1mINSERT INTO "calls" ("created_at", "updated_at", "conf_guid", "channel", "customer_id", "state") VALUES('2009-11-26 01:25:32', '2009-11-26 01:25:32', NULL, '1234', 61, 'arrived')[0m
+  [4;35;1mCall Update (0.1ms)[0m   [0mUPDATE "calls" SET "updated_at" = '2009-11-26 01:25:32', "state" = 'queued' WHERE "id" = 13[0m
+  [4;36;1mCall Update (0.1ms)[0m   [0;1mUPDATE "calls" SET "updated_at" = '2009-11-26 01:25:32', "state" = 'answered' WHERE "id" = 13[0m
+  [4;35;1mCall Create (0.2ms)[0m   [0mINSERT INTO "calls" ("created_at", "updated_at", "conf_guid", "channel", "customer_id", "state") VALUES('2009-11-26 01:25:32', '2009-11-26 01:25:32', NULL, '1234', 61, 'arrived')[0m
+  [4;36;1mCall Update (0.1ms)[0m   [0;1mUPDATE "calls" SET "updated_at" = '2009-11-26 01:25:32', "state" = 'queued' WHERE "id" = 13[0m
+  [4;35;1mCall Update (0.1ms)[0m   [0mUPDATE "calls" SET "updated_at" = '2009-11-26 01:25:32', "state" = 'answered' WHERE "id" = 13[0m
+  [4;36;1mCall Update (0.1ms)[0m   [0;1mUPDATE "calls" SET "updated_at" = '2009-11-26 01:25:32', "state" = 'hungup' WHERE "id" = 13[0m
+  [4;35;1mCall Create (0.3ms)[0m   [0mINSERT INTO "calls" ("created_at", "updated_at", "conf_guid", "channel", "customer_id", "state") VALUES('2009-11-26 01:25:32', '2009-11-26 01:25:32', NULL, '1234', 61, 'arrived')[0m
+  [4;36;1mCall Load (0.2ms)[0m   [0;1mSELECT * FROM "calls" WHERE ("calls"."channel" = '1234') LIMIT 1[0m
+  [4;35;1mCall Create (0.2ms)[0m   [0mINSERT INTO "calls" ("created_at", "updated_at", "conf_guid", "channel", "customer_id", "state") VALUES('2009-11-26 01:25:32', '2009-11-26 01:25:32', NULL, '1234', 61, 'arrived')[0m
+  [4;36;1mCall Create (0.1ms)[0m   [0;1mINSERT INTO "calls" ("created_at", "updated_at", "conf_guid", "channel", "customer_id", "state") VALUES('2009-11-26 01:25:32', '2009-11-26 01:25:32', NULL, '1234', 61, 'arrived')[0m
+  [4;35;1mCall Update (0.1ms)[0m   [0mUPDATE "calls" SET "updated_at" = '2009-11-26 01:25:32', "state" = 'queued' WHERE "id" = 14[0m
+  [4;36;1mCall Load (0.2ms)[0m   [0;1mSELECT calls.id, calls.channel, calls.conf_guid, calls.created_at, customers.priority FROM "calls" INNER JOIN "customers" ON "customers".id = "calls".customer_id WHERE (state = 'queued') [0m
+  [4;35;1mCall Create (0.2ms)[0m   [0mINSERT INTO "calls" ("created_at", "updated_at", "conf_guid", "channel", "customer_id", "state") VALUES('2009-11-26 01:25:32', '2009-11-26 01:25:32', NULL, '1234', 61, 'arrived')[0m
+  [4;36;1mCall Update (0.1ms)[0m   [0;1mUPDATE "calls" SET "updated_at" = '2009-11-26 01:25:32', "state" = 'queued' WHERE "id" = 13[0m
+  [4;35;1mCustomer Create (0.1ms)[0m   [0mINSERT INTO "customers" ("name", "twitter_screen_name", "created_at", "updated_at", "priority", "phone_number") VALUES(NULL, NULL, '2009-11-26 01:25:32', '2009-11-26 01:25:32', 100, '3035551212')[0m
+  [4;36;1mCall Create (0.1ms)[0m   [0;1mINSERT INTO "calls" ("created_at", "updated_at", "conf_guid", "channel", "customer_id", "state") VALUES('2009-11-26 01:25:32', '2009-11-26 01:25:32', NULL, '1987', 62, 'arrived')[0m
+  [4;35;1mCall Update (0.1ms)[0m   [0mUPDATE "calls" SET "updated_at" = '2009-11-26 01:25:32', "state" = 'queued' WHERE "id" = 14[0m
+  [4;36;1mCustomer Update (0.1ms)[0m   [0;1mUPDATE "customers" SET "updated_at" = '2009-11-26 01:25:32', "priority" = 110 WHERE "id" = 62[0m
+  [4;35;1mCall Load (0.3ms)[0m   [0mSELECT calls.id, calls.channel, calls.conf_guid, calls.created_at, customers.priority FROM "calls" INNER JOIN "customers" ON "customers".id = "calls".customer_id WHERE (state = 'queued') ORDER BY calls.created_at ASC[0m
+  [4;36;1mCall Create (0.3ms)[0m   [0;1mINSERT INTO "calls" ("created_at", "updated_at", "conf_guid", "channel", "customer_id", "state") VALUES('2009-11-26 01:25:32', '2009-11-26 01:25:32', NULL, '1234', 61, 'arrived')[0m
+  [4;35;1mCall Update (0.1ms)[0m   [0mUPDATE "calls" SET "updated_at" = '2009-11-26 01:25:32', "state" = 'queued' WHERE "id" = 13[0m
+  [4;36;1mCustomer Create (0.1ms)[0m   [0;1mINSERT INTO "customers" ("name", "twitter_screen_name", "created_at", "updated_at", "priority", "phone_number") VALUES(NULL, NULL, '2009-11-26 01:25:32', '2009-11-26 01:25:32', 100, '3035551212')[0m
+  [4;35;1mCall Create (0.1ms)[0m   [0mINSERT INTO "calls" ("created_at", "updated_at", "conf_guid", "channel", "customer_id", "state") VALUES('2009-11-26 01:25:32', '2009-11-26 01:25:32', NULL, '1987', 62, 'arrived')[0m
+  [4;36;1mCall Update (0.1ms)[0m   [0;1mUPDATE "calls" SET "updated_at" = '2009-11-26 01:25:32', "state" = 'queued' WHERE "id" = 14[0m
+  [4;35;1mCustomer Update (0.1ms)[0m   [0mUPDATE "customers" SET "updated_at" = '2009-11-26 01:25:32', "priority" = 110 WHERE "id" = 62[0m
+  [4;36;1mCall Load (0.5ms)[0m   [0;1mSELECT calls.id, calls.channel, calls.conf_guid, calls.created_at, customers.priority FROM "calls" INNER JOIN "customers" ON "customers".id = "calls".customer_id WHERE (state = 'queued') ORDER BY calls.created_at ASC[0m
+  [4;36;1mCustomer Create (1.0ms)[0m   [0;1mINSERT INTO "customers" ("name", "twitter_screen_name", "created_at", "updated_at", "priority", "phone_number") VALUES(NULL, NULL, '2009-11-26 01:25:54', '2009-11-26 01:25:54', 100, '4155551212')[0m
+  [4;35;1mCall Create (0.3ms)[0m   [0mINSERT INTO "calls" ("created_at", "updated_at", "conf_guid", "channel", "customer_id", "state") VALUES('2009-11-26 01:25:54', '2009-11-26 01:25:54', NULL, '1234', 62, 'arrived')[0m
+  [4;36;1mCall Create (0.6ms)[0m   [0;1mINSERT INTO "calls" ("created_at", "updated_at", "conf_guid", "channel", "customer_id", "state") VALUES('2009-11-26 01:25:54', '2009-11-26 01:25:54', NULL, '1234', 62, 'arrived')[0m
+  [4;35;1mCall Update (0.1ms)[0m   [0mUPDATE "calls" SET "updated_at" = '2009-11-26 01:25:54', "state" = 'queued' WHERE "id" = 13[0m
+  [4;36;1mCall Create (0.3ms)[0m   [0;1mINSERT INTO "calls" ("created_at", "updated_at", "conf_guid", "channel", "customer_id", "state") VALUES('2009-11-26 01:25:54', '2009-11-26 01:25:54', NULL, '1234', 62, 'arrived')[0m
+  [4;35;1mCall Update (0.1ms)[0m   [0mUPDATE "calls" SET "updated_at" = '2009-11-26 01:25:54', "state" = 'queued' WHERE "id" = 13[0m
+  [4;36;1mCall Update (0.1ms)[0m   [0;1mUPDATE "calls" SET "updated_at" = '2009-11-26 01:25:54', "state" = 'answered' WHERE "id" = 13[0m
+  [4;35;1mCall Create (0.3ms)[0m   [0mINSERT INTO "calls" ("created_at", "updated_at", "conf_guid", "channel", "customer_id", "state") VALUES('2009-11-26 01:25:54', '2009-11-26 01:25:54', NULL, '1234', 62, 'arrived')[0m
+  [4;36;1mCall Update (0.1ms)[0m   [0;1mUPDATE "calls" SET "updated_at" = '2009-11-26 01:25:54', "state" = 'queued' WHERE "id" = 13[0m
+  [4;35;1mCall Update (0.3ms)[0m   [0mUPDATE "calls" SET "updated_at" = '2009-11-26 01:25:54', "state" = 'answered' WHERE "id" = 13[0m
+  [4;36;1mCall Update (0.1ms)[0m   [0;1mUPDATE "calls" SET "updated_at" = '2009-11-26 01:25:54', "state" = 'hungup' WHERE "id" = 13[0m
+  [4;35;1mCall Create (0.3ms)[0m   [0mINSERT INTO "calls" ("created_at", "updated_at", "conf_guid", "channel", "customer_id", "state") VALUES('2009-11-26 01:25:54', '2009-11-26 01:25:54', NULL, '1234', 62, 'arrived')[0m
+  [4;36;1mCall Load (0.3ms)[0m   [0;1mSELECT * FROM "calls" WHERE ("calls"."channel" = '1234') LIMIT 1[0m
+  [4;35;1mCall Create (0.3ms)[0m   [0mINSERT INTO "calls" ("created_at", "updated_at", "conf_guid", "channel", "customer_id", "state") VALUES('2009-11-26 01:25:54', '2009-11-26 01:25:54', NULL, '1234', 62, 'arrived')[0m
+  [4;36;1mCall Create (0.1ms)[0m   [0;1mINSERT INTO "calls" ("created_at", "updated_at", "conf_guid", "channel", "customer_id", "state") VALUES('2009-11-26 01:25:54', '2009-11-26 01:25:54', NULL, '1234', 62, 'arrived')[0m
+  [4;35;1mCall Update (0.1ms)[0m   [0mUPDATE "calls" SET "updated_at" = '2009-11-26 01:25:54', "state" = 'queued' WHERE "id" = 14[0m
+  [4;36;1mCall Load (0.2ms)[0m   [0;1mSELECT calls.id, calls.channel, calls.conf_guid, calls.created_at, customers.priority FROM "calls" INNER JOIN "customers" ON "customers".id = "calls".customer_id WHERE (state = 'queued') [0m
+  [4;35;1mCall Create (0.3ms)[0m   [0mINSERT INTO "calls" ("created_at", "updated_at", "conf_guid", "channel", "customer_id", "state") VALUES('2009-11-26 01:25:54', '2009-11-26 01:25:54', NULL, '1234', 62, 'arrived')[0m
+  [4;36;1mCall Update (0.1ms)[0m   [0;1mUPDATE "calls" SET "updated_at" = '2009-11-26 01:25:54', "state" = 'queued' WHERE "id" = 13[0m
+  [4;35;1mCustomer Create (0.1ms)[0m   [0mINSERT INTO "customers" ("name", "twitter_screen_name", "created_at", "updated_at", "priority", "phone_number") VALUES(NULL, NULL, '2009-11-26 01:25:54', '2009-11-26 01:25:54', 100, '3035551212')[0m
+  [4;36;1mCall Create (0.1ms)[0m   [0;1mINSERT INTO "calls" ("created_at", "updated_at", "conf_guid", "channel", "customer_id", "state") VALUES('2009-11-26 01:25:54', '2009-11-26 01:25:54', NULL, '1987', 63, 'arrived')[0m
+  [4;35;1mCall Update (0.1ms)[0m   [0mUPDATE "calls" SET "updated_at" = '2009-11-26 01:25:54', "state" = 'queued' WHERE "id" = 14[0m
+  [4;36;1mCustomer Update (0.1ms)[0m   [0;1mUPDATE "customers" SET "updated_at" = '2009-11-26 01:25:54', "priority" = 110 WHERE "id" = 63[0m
+  [4;35;1mCall Load (0.5ms)[0m   [0mSELECT calls.id, calls.channel, calls.conf_guid, calls.created_at, customers.priority FROM "calls" INNER JOIN "customers" ON "customers".id = "calls".customer_id WHERE (state = 'queued') ORDER BY calls.created_at ASC[0m
+  [4;36;1mCall Create (0.3ms)[0m   [0;1mINSERT INTO "calls" ("created_at", "updated_at", "conf_guid", "channel", "customer_id", "state") VALUES('2009-11-26 01:25:54', '2009-11-26 01:25:54', NULL, '1234', 62, 'arrived')[0m
+  [4;35;1mCall Update (0.1ms)[0m   [0mUPDATE "calls" SET "updated_at" = '2009-11-26 01:25:54', "state" = 'queued' WHERE "id" = 13[0m
+  [4;36;1mCustomer Create (0.1ms)[0m   [0;1mINSERT INTO "customers" ("name", "twitter_screen_name", "created_at", "updated_at", "priority", "phone_number") VALUES(NULL, NULL, '2009-11-26 01:25:54', '2009-11-26 01:25:54', 100, '3035551212')[0m
+  [4;35;1mCall Create (0.1ms)[0m   [0mINSERT INTO "calls" ("created_at", "updated_at", "conf_guid", "channel", "customer_id", "state") VALUES('2009-11-26 01:25:54', '2009-11-26 01:25:54', NULL, '1987', 63, 'arrived')[0m
+  [4;36;1mCall Update (0.1ms)[0m   [0;1mUPDATE "calls" SET "updated_at" = '2009-11-26 01:25:54', "state" = 'queued' WHERE "id" = 14[0m
+  [4;35;1mCustomer Update (0.1ms)[0m   [0mUPDATE "customers" SET "updated_at" = '2009-11-26 01:25:54', "priority" = 110 WHERE "id" = 63[0m
+  [4;36;1mCall Load (0.5ms)[0m   [0;1mSELECT calls.id, calls.channel, calls.conf_guid, calls.created_at, customers.priority FROM "calls" INNER JOIN "customers" ON "customers".id = "calls".customer_id WHERE (state = 'queued') ORDER BY calls.created_at ASC[0m
+  [4;36;1mCustomer Create (0.4ms)[0m   [0;1mINSERT INTO "customers" ("name", "twitter_screen_name", "created_at", "updated_at", "priority", "phone_number") VALUES(NULL, NULL, '2009-11-26 01:26:18', '2009-11-26 01:26:18', 100, '4155551212')[0m
+  [4;35;1mCall Create (0.2ms)[0m   [0mINSERT INTO "calls" ("created_at", "updated_at", "conf_guid", "channel", "customer_id", "state") VALUES('2009-11-26 01:26:18', '2009-11-26 01:26:18', NULL, '1234', 63, 'arrived')[0m
+  [4;36;1mCall Create (0.2ms)[0m   [0;1mINSERT INTO "calls" ("created_at", "updated_at", "conf_guid", "channel", "customer_id", "state") VALUES('2009-11-26 01:26:18', '2009-11-26 01:26:18', NULL, '1234', 63, 'arrived')[0m
+  [4;35;1mCall Update (0.1ms)[0m   [0mUPDATE "calls" SET "updated_at" = '2009-11-26 01:26:18', "state" = 'queued' WHERE "id" = 13[0m
+  [4;36;1mCall Create (0.4ms)[0m   [0;1mINSERT INTO "calls" ("created_at", "updated_at", "conf_guid", "channel", "customer_id", "state") VALUES('2009-11-26 01:26:18', '2009-11-26 01:26:18', NULL, '1234', 63, 'arrived')[0m
+  [4;35;1mCall Update (0.1ms)[0m   [0mUPDATE "calls" SET "updated_at" = '2009-11-26 01:26:18', "state" = 'queued' WHERE "id" = 13[0m
+  [4;36;1mCall Update (0.1ms)[0m   [0;1mUPDATE "calls" SET "updated_at" = '2009-11-26 01:26:18', "state" = 'answered' WHERE "id" = 13[0m
+  [4;35;1mCall Create (0.3ms)[0m   [0mINSERT INTO "calls" ("created_at", "updated_at", "conf_guid", "channel", "customer_id", "state") VALUES('2009-11-26 01:26:18', '2009-11-26 01:26:18', NULL, '1234', 63, 'arrived')[0m
+  [4;36;1mCall Update (0.1ms)[0m   [0;1mUPDATE "calls" SET "updated_at" = '2009-11-26 01:26:18', "state" = 'queued' WHERE "id" = 13[0m
+  [4;35;1mCall Update (0.1ms)[0m   [0mUPDATE "calls" SET "updated_at" = '2009-11-26 01:26:18', "state" = 'answered' WHERE "id" = 13[0m
+  [4;36;1mCall Update (0.1ms)[0m   [0;1mUPDATE "calls" SET "updated_at" = '2009-11-26 01:26:18', "state" = 'hungup' WHERE "id" = 13[0m
+  [4;35;1mCall Create (0.2ms)[0m   [0mINSERT INTO "calls" ("created_at", "updated_at", "conf_guid", "channel", "customer_id", "state") VALUES('2009-11-26 01:26:18', '2009-11-26 01:26:18', NULL, '1234', 63, 'arrived')[0m
+  [4;36;1mCall Load (0.2ms)[0m   [0;1mSELECT * FROM "calls" WHERE ("calls"."channel" = '1234') LIMIT 1[0m
+  [4;35;1mCall Create (0.2ms)[0m   [0mINSERT INTO "calls" ("created_at", "updated_at", "conf_guid", "channel", "customer_id", "state") VALUES('2009-11-26 01:26:18', '2009-11-26 01:26:18', NULL, '1234', 63, 'arrived')[0m
+  [4;36;1mCall Create (0.1ms)[0m   [0;1mINSERT INTO "calls" ("created_at", "updated_at", "conf_guid", "channel", "customer_id", "state") VALUES('2009-11-26 01:26:18', '2009-11-26 01:26:18', NULL, '1234', 63, 'arrived')[0m
+  [4;35;1mCall Update (0.1ms)[0m   [0mUPDATE "calls" SET "updated_at" = '2009-11-26 01:26:18', "state" = 'queued' WHERE "id" = 14[0m
+  [4;36;1mCall Load (0.2ms)[0m   [0;1mSELECT calls.id, calls.channel, calls.conf_guid, calls.created_at, customers.priority FROM "calls" INNER JOIN "customers" ON "customers".id = "calls".customer_id WHERE (state = 'queued') [0m
+  [4;35;1mCall Create (0.3ms)[0m   [0mINSERT INTO "calls" ("created_at", "updated_at", "conf_guid", "channel", "customer_id", "state") VALUES('2009-11-26 01:26:18', '2009-11-26 01:26:18', NULL, '1234', 63, 'arrived')[0m
+  [4;36;1mCall Update (0.1ms)[0m   [0;1mUPDATE "calls" SET "updated_at" = '2009-11-26 01:26:18', "state" = 'queued' WHERE "id" = 13[0m
+  [4;35;1mCustomer Create (0.1ms)[0m   [0mINSERT INTO "customers" ("name", "twitter_screen_name", "created_at", "updated_at", "priority", "phone_number") VALUES(NULL, NULL, '2009-11-26 01:26:18', '2009-11-26 01:26:18', 100, '3035551212')[0m
+  [4;36;1mCall Create (0.1ms)[0m   [0;1mINSERT INTO "calls" ("created_at", "updated_at", "conf_guid", "channel", "customer_id", "state") VALUES('2009-11-26 01:26:18', '2009-11-26 01:26:18', NULL, '1987', 64, 'arrived')[0m
+  [4;35;1mCall Update (0.1ms)[0m   [0mUPDATE "calls" SET "updated_at" = '2009-11-26 01:26:18', "state" = 'queued' WHERE "id" = 14[0m
+  [4;36;1mCustomer Update (0.1ms)[0m   [0;1mUPDATE "customers" SET "updated_at" = '2009-11-26 01:26:18', "priority" = 110 WHERE "id" = 64[0m
+  [4;35;1mCall Load (0.3ms)[0m   [0mSELECT calls.id, calls.channel, calls.conf_guid, calls.created_at, customers.priority FROM "calls" INNER JOIN "customers" ON "customers".id = "calls".customer_id WHERE (state = 'queued') ORDER BY calls.created_at ASC[0m
+  [4;36;1mCall Create (0.3ms)[0m   [0;1mINSERT INTO "calls" ("created_at", "updated_at", "conf_guid", "channel", "customer_id", "state") VALUES('2009-11-26 01:26:18', '2009-11-26 01:26:18', NULL, '1234', 63, 'arrived')[0m
+  [4;35;1mCall Update (0.1ms)[0m   [0mUPDATE "calls" SET "updated_at" = '2009-11-26 01:26:18', "state" = 'queued' WHERE "id" = 13[0m
+  [4;36;1mCustomer Create (0.1ms)[0m   [0;1mINSERT INTO "customers" ("name", "twitter_screen_name", "created_at", "updated_at", "priority", "phone_number") VALUES(NULL, NULL, '2009-11-26 01:26:18', '2009-11-26 01:26:18', 100, '3035551212')[0m
+  [4;35;1mCall Create (0.1ms)[0m   [0mINSERT INTO "calls" ("created_at", "updated_at", "conf_guid", "channel", "customer_id", "state") VALUES('2009-11-26 01:26:18', '2009-11-26 01:26:18', NULL, '1987', 64, 'arrived')[0m
+  [4;36;1mCall Update (0.1ms)[0m   [0;1mUPDATE "calls" SET "updated_at" = '2009-11-26 01:26:18', "state" = 'queued' WHERE "id" = 14[0m
+  [4;35;1mCustomer Update (0.1ms)[0m   [0mUPDATE "customers" SET "updated_at" = '2009-11-26 01:26:18', "priority" = 110 WHERE "id" = 64[0m
+  [4;36;1mCall Load (0.3ms)[0m   [0;1mSELECT calls.id, calls.channel, calls.conf_guid, calls.created_at, customers.priority FROM "calls" INNER JOIN "customers" ON "customers".id = "calls".customer_id WHERE (state = 'queued') ORDER BY calls.created_at ASC[0m
+  [4;36;1mCustomer Create (0.4ms)[0m   [0;1mINSERT INTO "customers" ("name", "twitter_screen_name", "created_at", "updated_at", "priority", "phone_number") VALUES(NULL, NULL, '2009-11-26 01:26:44', '2009-11-26 01:26:44', 100, '4155551212')[0m
+  [4;35;1mCall Create (0.2ms)[0m   [0mINSERT INTO "calls" ("created_at", "updated_at", "conf_guid", "channel", "customer_id", "state") VALUES('2009-11-26 01:26:44', '2009-11-26 01:26:44', NULL, '1234', 64, 'arrived')[0m
+  [4;36;1mCall Create (0.2ms)[0m   [0;1mINSERT INTO "calls" ("created_at", "updated_at", "conf_guid", "channel", "customer_id", "state") VALUES('2009-11-26 01:26:44', '2009-11-26 01:26:44', NULL, '1234', 64, 'arrived')[0m
+  [4;35;1mCall Update (0.1ms)[0m   [0mUPDATE "calls" SET "updated_at" = '2009-11-26 01:26:44', "state" = 'queued' WHERE "id" = 13[0m
+  [4;36;1mCall Create (0.3ms)[0m   [0;1mINSERT INTO "calls" ("created_at", "updated_at", "conf_guid", "channel", "customer_id", "state") VALUES('2009-11-26 01:26:44', '2009-11-26 01:26:44', NULL, '1234', 64, 'arrived')[0m
+  [4;35;1mCall Update (0.1ms)[0m   [0mUPDATE "calls" SET "updated_at" = '2009-11-26 01:26:44', "state" = 'queued' WHERE "id" = 13[0m
+  [4;36;1mCall Update (0.1ms)[0m   [0;1mUPDATE "calls" SET "updated_at" = '2009-11-26 01:26:44', "state" = 'answered' WHERE "id" = 13[0m
+  [4;35;1mCall Create (0.2ms)[0m   [0mINSERT INTO "calls" ("created_at", "updated_at", "conf_guid", "channel", "customer_id", "state") VALUES('2009-11-26 01:26:44', '2009-11-26 01:26:44', NULL, '1234', 64, 'arrived')[0m
+  [4;36;1mCall Update (0.1ms)[0m   [0;1mUPDATE "calls" SET "updated_at" = '2009-11-26 01:26:44', "state" = 'queued' WHERE "id" = 13[0m
+  [4;35;1mCall Update (0.1ms)[0m   [0mUPDATE "calls" SET "updated_at" = '2009-11-26 01:26:44', "state" = 'answered' WHERE "id" = 13[0m
+  [4;36;1mCall Update (0.1ms)[0m   [0;1mUPDATE "calls" SET "updated_at" = '2009-11-26 01:26:44', "state" = 'hungup' WHERE "id" = 13[0m
+  [4;35;1mCall Create (0.2ms)[0m   [0mINSERT INTO "calls" ("created_at", "updated_at", "conf_guid", "channel", "customer_id", "state") VALUES('2009-11-26 01:26:44', '2009-11-26 01:26:44', NULL, '1234', 64, 'arrived')[0m
+  [4;36;1mCall Load (0.2ms)[0m   [0;1mSELECT * FROM "calls" WHERE ("calls"."channel" = '1234') LIMIT 1[0m
+  [4;35;1mCall Create (0.2ms)[0m   [0mINSERT INTO "calls" ("created_at", "updated_at", "conf_guid", "channel", "customer_id", "state") VALUES('2009-11-26 01:26:44', '2009-11-26 01:26:44', NULL, '1234', 64, 'arrived')[0m
+  [4;36;1mCall Create (0.1ms)[0m   [0;1mINSERT INTO "calls" ("created_at", "updated_at", "conf_guid", "channel", "customer_id", "state") VALUES('2009-11-26 01:26:44', '2009-11-26 01:26:44', NULL, '1234', 64, 'arrived')[0m
+  [4;35;1mCall Update (0.1ms)[0m   [0mUPDATE "calls" SET "updated_at" = '2009-11-26 01:26:44', "state" = 'queued' WHERE "id" = 14[0m
+  [4;36;1mCall Load (0.2ms)[0m   [0;1mSELECT calls.id, calls.channel, calls.conf_guid, calls.created_at, customers.priority FROM "calls" INNER JOIN "customers" ON "customers".id = "calls".customer_id WHERE (state = 'queued') [0m
+  [4;35;1mCall Create (0.2ms)[0m   [0mINSERT INTO "calls" ("created_at", "updated_at", "conf_guid", "channel", "customer_id", "state") VALUES('2009-11-26 01:26:44', '2009-11-26 01:26:44', NULL, '1234', 64, 'arrived')[0m
+  [4;36;1mCall Update (0.1ms)[0m   [0;1mUPDATE "calls" SET "updated_at" = '2009-11-26 01:26:44', "state" = 'queued' WHERE "id" = 13[0m
+  [4;35;1mCustomer Create (0.1ms)[0m   [0mINSERT INTO "customers" ("name", "twitter_screen_name", "created_at", "updated_at", "priority", "phone_number") VALUES(NULL, NULL, '2009-11-26 01:26:44', '2009-11-26 01:26:44', 100, '3035551212')[0m
+  [4;36;1mCall Create (0.1ms)[0m   [0;1mINSERT INTO "calls" ("created_at", "updated_at", "conf_guid", "channel", "customer_id", "state") VALUES('2009-11-26 01:26:44', '2009-11-26 01:26:44', NULL, '1987', 65, 'arrived')[0m
+  [4;35;1mCall Update (0.1ms)[0m   [0mUPDATE "calls" SET "updated_at" = '2009-11-26 01:26:44', "state" = 'queued' WHERE "id" = 14[0m
+  [4;36;1mCustomer Update (0.1ms)[0m   [0;1mUPDATE "customers" SET "updated_at" = '2009-11-26 01:26:44', "priority" = 110 WHERE "id" = 65[0m
+  [4;35;1mCall Load (0.2ms)[0m   [0mSELECT calls.id, calls.channel, calls.conf_guid, calls.created_at, customers.priority FROM "calls" INNER JOIN "customers" ON "customers".id = "calls".customer_id WHERE (state = 'queued') ORDER BY calls.created_at ASC[0m
+  [4;36;1mCall Create (0.3ms)[0m   [0;1mINSERT INTO "calls" ("created_at", "updated_at", "conf_guid", "channel", "customer_id", "state") VALUES('2009-11-26 01:26:44', '2009-11-26 01:26:44', NULL, '1234', 64, 'arrived')[0m
+  [4;35;1mCall Update (0.1ms)[0m   [0mUPDATE "calls" SET "updated_at" = '2009-11-26 01:26:44', "state" = 'queued' WHERE "id" = 13[0m
+  [4;36;1mCustomer Create (0.1ms)[0m   [0;1mINSERT INTO "customers" ("name", "twitter_screen_name", "created_at", "updated_at", "priority", "phone_number") VALUES(NULL, NULL, '2009-11-26 01:26:44', '2009-11-26 01:26:44', 100, '3035551212')[0m
+  [4;35;1mCall Create (0.1ms)[0m   [0mINSERT INTO "calls" ("created_at", "updated_at", "conf_guid", "channel", "customer_id", "state") VALUES('2009-11-26 01:26:44', '2009-11-26 01:26:44', NULL, '1987', 65, 'arrived')[0m
+  [4;36;1mCall Update (0.1ms)[0m   [0;1mUPDATE "calls" SET "updated_at" = '2009-11-26 01:26:44', "state" = 'queued' WHERE "id" = 14[0m
+  [4;35;1mCustomer Update (0.1ms)[0m   [0mUPDATE "customers" SET "updated_at" = '2009-11-26 01:26:44', "priority" = 110 WHERE "id" = 65[0m
+  [4;36;1mCall Load (0.3ms)[0m   [0;1mSELECT calls.id, calls.channel, calls.conf_guid, calls.created_at, customers.priority FROM "calls" INNER JOIN "customers" ON "customers".id = "calls".customer_id WHERE (state = 'queued') ORDER BY calls.created_at ASC[0m

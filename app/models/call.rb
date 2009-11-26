@@ -26,4 +26,15 @@ class Call < ActiveRecord::Base
                 :from  => [:arrived, :queued, :answered]
   end
   
+  def self.find_by_queue
+    calls = self.find(:all, 
+                      :conditions => ['state = ?', 'queued'], 
+                      :select => "calls.id, calls.channel, calls.conf_guid, calls.created_at, customers.priority", 
+                      :joins => :customer,
+                      :order => 'calls.created_at ASC')
+
+    calls.sort! { |a, b| a.created_at <=> b.created_at }
+    calls.sort! { |a, b| b.priority <=> a.priority }
+    calls
+  end
 end
